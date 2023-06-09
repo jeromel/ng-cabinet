@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import { Patient } from 'src/app/models/patient';
 import { environment } from 'src/environments/environment';
 
 @Component({

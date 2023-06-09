@@ -17,7 +17,7 @@ import * as timeZoneNames from '../assets/cldr-data/timeZoneNames.json';
 import { PatientGridComponent } from './components/organisme/patient-grid/patient-grid.component';
 import { PatientPageComponent } from './components/page/patient-page/patient-page.component';
 import { PatientGridContainerComponent } from './components/organisme/patient-grid-container/patient-grid-container.component';
-
+import { FakeBackendInterceptor } from './services/backend-interceptor';
 
 setCulture('fr');
 loadCldr(numberingSystems, gregorian, numbers, timeZoneNames);
@@ -107,7 +107,9 @@ L10n.load({
     AppRoutingModule,
     GridModule
   ],
-  providers: [],
+  providers: [
+    FakeBackendInterceptor
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
