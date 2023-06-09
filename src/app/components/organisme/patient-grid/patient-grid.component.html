@@ -1,0 +1,15 @@
+<h1 class="page-title pt-3">GESTION DES PATIENTS</h1>
+<div class="control-section pe-3 pt-2 ps-3">
+    <ejs-grid #batchgrid id='Batchgrid' [locale]="frCulture" [dataSource]='data' allowPaging='true' allowSorting="true"
+        [editSettings]='editSettings' [allowFiltering]='true' [pageSettings]='pageSettings' [toolbar]='toolbar'
+        [rowHeight]="31">
+        <e-columns>
+            <e-column field='id' headerText='id' isPrimaryKey='true' [visible]="false"></e-column>
+            <e-column defaultValue="" field='prenom' headerText='Prenom' type='string'></e-column>
+            <e-column defaultValue="" field='nom' headerText='Nom' type='string'></e-column>
+            <e-column defaultValue="" field='dateDeNaissance' headerText='Date de Naissance' [format]="shortDateFormat"
+            editType='datepickeredit'
+></e-column>
+        </e-columns>
+    </ejs-grid>
+</div>
